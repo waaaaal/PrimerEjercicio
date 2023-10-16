@@ -1,17 +1,17 @@
 import React, { useState, useRef } from "react";
 function TaskList(props) {
-  const liRef = useRef(null);
+  const liReference = useRef(null);
 
   const handleListChange = () => {
-    if (liRef.current) {
-      liRef.current.classList.toggle("setTachado"); // Alterna la clase "tachado"
+    if (liReference.current) {
+      liReference.current.classList.toggle("setLineThrough");
     }
   };
   return (
     <section className="tasks">
       <ul className="task-list">
         {props.datosParaLista.map((elemento, index) => (
-          <li onClick={handleListChange} key={index} ref={liRef}>
+          <li onClick={handleListChange} key={index} ref={liReference}>
             {elemento}
           </li>
         ))}

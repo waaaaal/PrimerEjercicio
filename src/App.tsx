@@ -1,16 +1,15 @@
 import React from 'react';
 import './index.css';
-import { Header } from './Greaters';
-import MainContent from './MainContent';
+import { Header } from './Header';
+import TaskManager from './TaskManager';
 import Footer from './Footer';
 function App() {
   return (
     <>
     <Header />
-    <MainContent />
+    <TaskManager />
     <Footer />
     </>
   );
 }
-// Prueba para PullRequest...
 export default App;

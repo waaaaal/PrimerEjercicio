@@ -110,11 +110,11 @@ main {
   cursor: default;
 }
 
-.tachado{
+.NotLineThrough{
   text-decoration: none;
 }
 
-.setTachado{
+.setLineThrough{
   text-decoration: line-through;
 
 }
