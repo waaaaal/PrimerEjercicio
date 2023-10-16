@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index';
 import { Header } from './Header';
 import TaskManager from './TaskManager';
 import Footer from './Footer';

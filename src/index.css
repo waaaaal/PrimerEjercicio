@@ -109,12 +109,3 @@ main {
   opacity: .5;
   cursor: default;
 }
-
-.NotLineThrough{
-  text-decoration: none;
-}
-
-.setLineThrough{
-  text-decoration: line-through;
-
-}

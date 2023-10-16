@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import TaskList from "./TaskList";
 
-function TaskForm() {
+function TaskForm({ createTask }) {
   const [inputText, setInputText] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const [elementos, setElementos] = useState([]);
 
   const handleInputChange = (e) => {
     const text = e.target.value;
@@ -17,7 +15,7 @@ function TaskForm() {
   };
 
   const handleButtonChange = () => {
-    setElementos([...elementos, inputText]);
+    createTask(inputText);
 
     setInputText(" ");
   };
@@ -46,7 +44,6 @@ function TaskForm() {
           </button>
         </fieldset>
       </form>
-      <TaskList datosParaLista={elementos} />
     </>
   );
 }

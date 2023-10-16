@@ -1,18 +1,11 @@
-import React, { useState, useRef } from "react";
-function TaskList(props) {
-  const liReference = useRef(null);
-
-  const handleListChange = () => {
-    if (liReference.current) {
-      liReference.current.classList.toggle("setLineThrough");
-    }
-  };
+function TaskList({ tasks }) {
+  const handleListChange = () => {};
   return (
     <section className="tasks">
       <ul className="task-list">
-        {props.datosParaLista.map((elemento, index) => (
-          <li onClick={handleListChange} key={index} ref={liReference}>
-            {elemento}
+        {tasks.map((item, index) => (
+          <li onClick={handleListChange} key={index}>
+            {item.text}
           </li>
         ))}
       </ul>
