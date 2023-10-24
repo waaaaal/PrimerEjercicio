@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 
-function TaskForm({ createTask }) {
+
+interface TaskFormProp{
+  createTask: (input: string) => void;
+
+}
+
+function TaskForm({ createTask }:TaskFormProp){
   const [inputText, setInputText] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const text = e.target.value;
     setInputText(text);
     if (text.length < 4) {
@@ -17,7 +23,7 @@ function TaskForm({ createTask }) {
   const handleButtonChange = () => {
     createTask(inputText);
 
-    setInputText(" ");
+    setInputText("");
   };
 
   return (

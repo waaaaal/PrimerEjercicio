@@ -91,18 +91,13 @@ main {
   cursor: pointer;
 }
 
-.task-list .done {
-  text-decoration: line-through;
-}
 
-.complete{
+
+.completed{
   text-decoration: line-through;
 
 }
-.noCompleted{
-  text-decoration: none;
 
-}
 
 .button {
   font-size: 1rem;

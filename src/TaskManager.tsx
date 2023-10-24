@@ -18,7 +18,7 @@ function TaskManager() {
     setTasks(updatedTasks);
   }
 
-  function createTask(taskText: string) {
+  function createTask(taskText: string):void{
     const newTask: Task = { text: taskText, completed: false };
 
     setTasks([...tasks, newTask]);
