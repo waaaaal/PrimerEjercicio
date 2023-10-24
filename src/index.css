@@ -95,6 +95,15 @@ main {
   text-decoration: line-through;
 }
 
+.complete{
+  text-decoration: line-through;
+
+}
+.noCompleted{
+  text-decoration: none;
+
+}
+
 .button {
   font-size: 1rem;
   padding: .5rem;
