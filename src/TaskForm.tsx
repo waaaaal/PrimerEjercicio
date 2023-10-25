@@ -6,11 +6,11 @@ interface TaskFormProp{
 
 }
 
-function TaskForm({ createTask }:TaskFormProp){
+function TaskForm({ createTask }:TaskFormProp): JSX.Element{
   const [inputText, setInputText] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) : void=> {
     const text = e.target.value;
     setInputText(text);
     if (text.length < 4) {
@@ -20,7 +20,7 @@ function TaskForm({ createTask }:TaskFormProp){
     setIsButtonDisabled(false);
   };
 
-  const handleButtonChange = () => {
+  const handleButtonChange = (): void => {
     createTask(inputText);
 
     setInputText("");

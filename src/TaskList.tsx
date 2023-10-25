@@ -17,7 +17,7 @@ function TaskList({ tasks, handleCompleted }: TaskListProps):JSX.Element {
     <section className="tasks">
       <ul className="task-list">
         {tasks.map((item, index) => (
-        <li className={item.completed ? 'completed' : ''}onClick={() => handleCompleted(index)} >
+        <li className={item.completed ? 'completed' : ''}onClick={() : void=> handleCompleted(index)} >
            {item.text } 
           </li>
         ))}

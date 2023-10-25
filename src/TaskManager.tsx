@@ -7,7 +7,7 @@ interface Task {
   completed: boolean; 
 }
 
-function TaskManager() {
+function TaskManager() : JSX.Element {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   const handleCompleted = (index: number): void => {
