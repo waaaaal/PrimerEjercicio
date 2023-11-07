@@ -1,29 +1,29 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTask } from "./features/tasks/taskSlice";
 
-
-interface TaskFormProp{
+interface TaskFormProps {
   createTask: (input: string) => void;
-
 }
 
-function TaskForm({ createTask }:TaskFormProp): JSX.Element{
+function TaskForm(): JSX.Element {
   const [inputText, setInputText] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const dispatch = useDispatch();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) : void=> {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const text = e.target.value;
-    setInputText(text);
+    setInputText(text); // Actualiza el estado con el texto del input
     if (text.length < 4) {
       setIsButtonDisabled(true);
-      return;
+    } else {
+      setIsButtonDisabled(false);
     }
-    setIsButtonDisabled(false);
   };
 
   const handleButtonChange = (): void => {
-    createTask(inputText);
-
-    setInputText("");
+    dispatch(addTask({ text: inputText, completed: false })); // Envía el texto como objeto
+    setInputText(""); // Limpia el input después de agregar la tarea
   };
 
   return (

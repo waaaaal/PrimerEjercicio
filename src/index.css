@@ -113,3 +113,33 @@ main {
   opacity: .5;
   cursor: default;
 }
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+  text-align: center;
+}
+
+.nav-item {
+  display: inline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+.page-content {
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}

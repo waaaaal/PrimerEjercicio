@@ -1,19 +1,24 @@
 import React from 'react';
-import './index';
 import { Header } from './Header';
-import TaskManager from './TaskManager';
 import Footer from './Footer';
-import { TaskDone } from './TaskDone';
-
-function App() :JSX.Element{
+import NavigationMenu from './Navigationmenu';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import TaskDone from './TaskDone';
+import TaskManager from './TaskManager';
+function App(): JSX.Element {
   return (
-    <>
-    <Header />
-    <TaskManager />
-    <Footer />
-    <TaskDone></TaskDone>
-    
-    </>
+    <BrowserRouter>
+      <div>
+        <Header />
+        <NavigationMenu />
+        <Routes>
+          <Route path="/" element={<TaskManager/>} />
+          <Route path="a" element={<TaskDone/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
+
 export default App;

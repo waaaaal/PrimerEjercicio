@@ -1,24 +1,30 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleTask } from "./features/tasks/taskSlice";
+
 interface Task {
   text: string;
   completed: boolean;
 }
 
-interface TaskListProps  {
-  tasks: Task[];
-  handleCompleted: (index:number) => void
-}
+function TaskList(): JSX.Element {
+  const tasks = useSelector((state: any) => state.tasks.tasks);
+  const dispatch = useDispatch();
 
-function TaskList({ tasks, handleCompleted }: TaskListProps):JSX.Element {
-
-
+  const handleCompleted = (index: number): void => {
+    dispatch(toggleTask(index));
+  };
 
   return (
     <section className="tasks">
       <ul className="task-list">
-        {tasks.map((item, index) => (
-        <li className={item.completed ? 'completed' : ''}onClick={() : void=> handleCompleted(index)} >
-           {item.text } 
+        {tasks.map((task: Task, index: number) => (
+          <li
+            key={index}
+            className={task.completed ? "completed" : ""}
+            onClick={() :void  => handleCompleted(index)}
+          >
+            {task.text}
           </li>
         ))}
       </ul>
@@ -27,4 +33,3 @@ function TaskList({ tasks, handleCompleted }: TaskListProps):JSX.Element {
 }
 
 export default TaskList;
-
