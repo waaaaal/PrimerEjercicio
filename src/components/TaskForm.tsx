@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTask } from "./features/tasks/taskSlice";
-
-
+import { addTask } from "../features/tasks/taskSlice";
 
 function TaskForm(): JSX.Element {
   const [inputText, setInputText] = useState("");
@@ -11,7 +9,7 @@ function TaskForm(): JSX.Element {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const text = e.target.value;
-    setInputText(text); 
+    setInputText(text);
     if (text.length < 4) {
       setIsButtonDisabled(true);
     } else {
@@ -20,8 +18,8 @@ function TaskForm(): JSX.Element {
   };
 
   const handleButtonChange = (): void => {
-    dispatch(addTask({ text: inputText, completed: false })); 
-    setInputText(""); 
+    dispatch(addTask({ text: inputText, completed: false }));
+    setInputText("");
   };
 
   return (

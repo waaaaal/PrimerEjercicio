@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTask } from "./features/tasks/taskSlice";
+import { toggleTask } from "../features/tasks/taskSlice";
 
 interface Task {
   text: string;

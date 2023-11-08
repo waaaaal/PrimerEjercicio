@@ -5,7 +5,6 @@
 }
 
 html, body {
-  height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   padding: 0;
@@ -15,7 +14,12 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
+
+
 
 main {
   flex: 1;
@@ -23,13 +27,16 @@ main {
 }
 
 .container-wrapper {
+
   max-width: 80rem;
   margin: 0 auto;
   padding: 2rem 3rem
+  
 }
 
 .header {
   background: #504118;
+  
 }
 
 .header a{

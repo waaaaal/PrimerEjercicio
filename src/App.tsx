@@ -1,10 +1,11 @@
-import React from 'react';
-import { Header } from './Header';
-import Footer from './Footer';
-import NavigationMenu from './Navigationmenu';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import TaskDone from './TaskDone';
-import TaskManager from './TaskManager';
+import React from "react";
+import { Header } from "./components/Header";
+import Footer from "./components/Footer";
+import NavigationMenu from "./components/Navigationmenu";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TaskManager from "./components/TaskManager";
+import TaskList from "./components/TaskList";
+
 function App(): JSX.Element {
   return (
     <BrowserRouter>
@@ -12,8 +13,8 @@ function App(): JSX.Element {
         <Header />
         <NavigationMenu />
         <Routes>
-          <Route path="/" element={<TaskManager/>} />
-          <Route path="a" element={<TaskDone/>} />
+          <Route path="/" element={<TaskManager />} />
+          <Route path="a" element={<TaskList />} />
         </Routes>
         <Footer />
       </div>

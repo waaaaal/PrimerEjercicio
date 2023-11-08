@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-function Footer() :JSX.Element {
+function Footer(): JSX.Element {
   return (
     <footer className="footer">
       <div className="container-wrapper">
