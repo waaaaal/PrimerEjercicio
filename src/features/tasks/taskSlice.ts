@@ -1,23 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit';
-
-interface Task {
-  text: string;
-  completed: boolean;
-}
-
-interface RootState {
-  tasks: Task[];
-}
+import { createSlice } from "@reduxjs/toolkit";
+import { Task } from "../../interfaces/Task";
+import { RootState } from "../../interfaces/RootState";
 
 const initialState: RootState = {
-  tasks: [
-    { text: "Tarea de ejemplo 1", completed: false },
-    { text: "Tarea de ejemplo 2", completed: true },
-  ],
+  tasks: [],
 };
 
 export const taskSlice = createSlice({
-  name: 'tasks',
+  name: "tasks",
   initialState,
   reducers: {
     addTask: (state, action) => {

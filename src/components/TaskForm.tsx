@@ -12,9 +12,10 @@ function TaskForm(): JSX.Element {
     setInputText(text);
     if (text.length < 4) {
       setIsButtonDisabled(true);
-    } else {
-      setIsButtonDisabled(false);
+      return;
     }
+    setIsButtonDisabled(false);
+    return;
   };
 
   const handleButtonChange = (): void => {

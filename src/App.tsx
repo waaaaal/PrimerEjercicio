@@ -9,15 +9,13 @@ import TaskList from "./components/TaskList";
 function App(): JSX.Element {
   return (
     <BrowserRouter>
-      <div>
-        <Header />
-        <NavigationMenu />
-        <Routes>
-          <Route path="/" element={<TaskManager />} />
-          <Route path="a" element={<TaskList />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Header />
+      <NavigationMenu />
+      <Routes>
+        <Route path="/" element={<TaskManager />} />
+        <Route path="a" element={<TaskList />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
