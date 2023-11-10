@@ -21,6 +21,7 @@ function TaskForm(): JSX.Element {
   const handleButtonChange = (): void => {
     dispatch(addTask({ text: inputText, completed: false }));
     setInputText("");
+    setIsButtonDisabled(true);
   };
 
   return (

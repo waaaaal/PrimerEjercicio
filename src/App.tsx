@@ -11,10 +11,15 @@ function App(): JSX.Element {
     <BrowserRouter>
       <Header />
       <NavigationMenu />
-      <Routes>
-        <Route path="/" element={<TaskManager />} />
-        <Route path="a" element={<TaskList />} />
-      </Routes>
+      <main>
+        <div className="container-wrapper main-content">
+          <Routes>
+            <Route path="/" element={<TaskManager />} />
+            <Route path="a" element={<TaskList />} />
+          </Routes>
+        </div>
+      </main>
+
       <Footer />
     </BrowserRouter>
   );

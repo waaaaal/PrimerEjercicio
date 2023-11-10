@@ -4,12 +4,8 @@ import NavigationMenu from "./Navigationmenu";
 function TaskManager(): JSX.Element {
   return (
     <>
-      <main>
-        <div className="container-wrapper main-content">
-          <TaskForm />
-          <TaskList />
-        </div>
-      </main>
+      <TaskForm />
+      <TaskList />
     </>
   );
 }

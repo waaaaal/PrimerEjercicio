@@ -12,23 +12,21 @@ function TaskList(): JSX.Element {
   };
 
   return (
-    <main>
-      <div className="container-wrapper main-content">
-        <section className="tasks">
-          <ul className="task-list">
-            {tasks.map((task: Task, index: number) => (
-              <li
-                key={index}
-                className={task.completed ? "completed" : ""}
-                onClick={(): void => handleCompleted(index)}
-              >
-                {task.text}
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
-    </main>
+    <>
+      <section className="tasks">
+        <ul className="task-list">
+          {tasks.map((task: Task, index: number) => (
+            <li
+              key={index}
+              className={task.completed ? "completed" : ""}
+              onClick={(): void => handleCompleted(index)}
+            >
+              {task.text}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </>
   );
 }
 
