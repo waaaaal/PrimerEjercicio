@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-function Footer() {
+function Footer(): JSX.Element {
   return (
     <footer className="footer">
       <div className="container-wrapper">
-        <p>&copy; Dani Cabal</p>
+        <p>&copy; Wal Stegierski</p>
       </div>
     </footer>
   );
